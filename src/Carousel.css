@@ -4,47 +4,46 @@
   gap: 10px;
 }
 
-.Carousel--outer .item {
+.item {
   height: fit-content;
   width: 100px;
   height: 275px;
   outline: 1px solid;
   flex: 1 0 auto;
-  max-width: calc(100% - 10px);
 }
 
 @media (max-width: 900px) {
-  .Carousel--outer .item:nth-child(n + 6) {
+  .item:nth-child(n + 6) {
     display: none;
   }
 }
 
 @media (max-width: 800px) {
-  .Carousel--outer .item:nth-child(n + 5) {
+  .item:nth-child(n + 5) {
     display: none;
   }
 }
 
 @media (max-width: 700px) {
-  .Carousel--outer .item:nth-child(n + 4) {
+  .item:nth-child(n + 4) {
     display: none;
   }
 }
 
 @media (max-width: 600px) {
-  .Carousel--outer .item:nth-child(n + 3) {
+  .item:nth-child(n + 3) {
     display: none;
   }
 }
 
 @media (max-width: 500px) {
-  .Carousel--outer .item:nth-child(n + 2) {
+  .item:nth-child(n + 2) {
     display: none;
   }
 }
 
 @media (max-width: 400px) {
-  .Carousel--outer .item:nth-child(n + 1) {
+  .item:nth-child(n + 1) {
     display: none;
   }
 }
