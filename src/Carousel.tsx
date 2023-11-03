@@ -23,11 +23,12 @@ export default (props: CarouselProps & SwiperProps) => {
 
   return (
     <Swiper
+      breakpoints={props.breakpoints}
       className="Swiper-element"
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       navigation={true}
       spaceBetween={10}
-      slidesPerView={5}
+      slidesPerView={1}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
     >
