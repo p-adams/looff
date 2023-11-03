@@ -1,8 +1,8 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import Carousel from "./Carousel";
+import Card from "./Card";
+import Thumbnail from "./Thumbnail";
 
 function App() {
   return (
@@ -14,7 +14,14 @@ function App() {
       </div>
       <h1>Looff Carousel Component</h1>
       <div className="card">
-        <Carousel />
+        <section>
+          <h2>Thumbnails</h2>
+          <Carousel renderSlideContent={() => <Thumbnail />} />
+        </section>
+        {/* <section>
+          <h2> Responsive Thumbnails</h2>
+          <Carousel renderSlideContent={() => <Thumbnail />} />
+  </section> */}
       </div>
 
       <p className="read-the-docs">
