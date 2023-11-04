@@ -6,7 +6,7 @@ import Thumbnail from "./Thumbnail";
 import { useState } from "react";
 
 function App() {
-  const [demoMode, setDemoMode] = useState("thumbnail_responsive");
+  const [demoMode, setDemoMode] = useState("thumbnail");
   return (
     <>
       <div></div>
@@ -32,6 +32,10 @@ function App() {
             <h2>Responsive Thumbnails</h2>
             <Carousel
               breakpoints={{
+                400: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                },
                 640: {
                   slidesPerView: 2,
                   spaceBetween: 20,
