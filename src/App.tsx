@@ -24,7 +24,10 @@ function App() {
         {demoMode === "thumbnail" && (
           <section>
             <h2>Thumbnails</h2>
-            <Carousel renderSlideContent={() => <Thumbnail />} />
+            <Carousel
+              showSlidesInDialog={true}
+              renderSlideContent={() => <Thumbnail />}
+            />
           </section>
         )}
         {demoMode === "thumbnail_responsive" && (
@@ -34,19 +37,19 @@ function App() {
               breakpoints={{
                 400: {
                   slidesPerView: 1,
-                  spaceBetween: 20,
+                  spaceBetween: 10,
                 },
                 640: {
                   slidesPerView: 2,
-                  spaceBetween: 20,
+                  spaceBetween: 10,
                 },
                 768: {
                   slidesPerView: 4,
-                  spaceBetween: 40,
+                  spaceBetween: 10,
                 },
                 1024: {
                   slidesPerView: 5,
-                  spaceBetween: 50,
+                  spaceBetween: 10,
                 },
               }}
               renderSlideContent={() => <Thumbnail />}
