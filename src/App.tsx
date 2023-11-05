@@ -37,20 +37,16 @@ function App() {
               <h2>Responsive Thumbnails</h2>
               <Carousel
                 breakpoints={{
-                  400: {
+                  640: {
                     slidesPerView: 1,
                     spaceBetween: 10,
                   },
-                  640: {
+                  768: {
                     slidesPerView: 2,
                     spaceBetween: 10,
                   },
-                  960: {
-                    slidesPerView: 3, // Adjust this value as needed
-                    spaceBetween: 10,
-                  },
-                  1280: {
-                    slidesPerView: 4, // Adjust this value as needed
+                  1024: {
+                    slidesPerView: 4,
                     spaceBetween: 10,
                   },
                 }}

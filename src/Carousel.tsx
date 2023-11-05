@@ -43,7 +43,7 @@ export default (props: CarouselProps & SwiperProps) => {
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         navigation={true}
         spaceBetween={10}
-        slidesPerView={slidesPerView ?? 5}
+        slidesPerView={slidesPerView ?? 4}
         onSlideChange={() => {}}
         onSwiper={(swiper) => {}}
       >
