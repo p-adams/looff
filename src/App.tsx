@@ -1,28 +1,18 @@
-import viteLogo from "/vite.svg";
-import "./App.css";
 import Carousel from "./Carousel";
 import Card from "./Card";
 import Thumbnail from "./Thumbnail";
 import { useState } from "react";
+import "./App.css";
 
 function App() {
-  const [demoMode, setDemoMode] = useState("thumbnail");
+  const [demoMode, setDemoMode] = useState<
+    "thumbnail" | "thumbnail_responsive" | "card" | "card_responsive"
+  >("thumbnail");
   return (
     <section>
       <h1>Looff Carousel Component</h1>
       <div className="container">
         <div className="main-content">
-          <label htmlFor="demoMode">
-            Demo Modes:
-            <select id="demoMode" onChange={(e) => setDemoMode(e.target.value)}>
-              <option value={"thumbnail"}>Thumbnail</option>
-              <option value={"thumbnail_responsive"}>
-                Responsive Thumbnail
-              </option>
-              <option value={"card"}>Card</option>
-              <option value={"card_responsive"}>Responsive Card</option>
-            </select>
-          </label>
           {demoMode === "thumbnail" && (
             <section>
               <h2>Thumbnails</h2>
@@ -68,13 +58,16 @@ function App() {
           )}
         </div>
         <aside>
+          <h3>Demo Modes</h3>
           <ul>
-            {Array(8)
-              .fill(0)
-              .map((_, i) => ({ label: `data: ${i}` }))
-              .map((d) => (
-                <li>{d.label}</li>
-              ))}
+            <li onClick={() => setDemoMode("thumbnail")}>Thumbnail</li>
+            <li onClick={() => setDemoMode("thumbnail_responsive")}>
+              Responsive Thumbnail
+            </li>
+            <li onClick={() => setDemoMode("card")}>Card</li>
+            <li onClick={() => setDemoMode("card_responsive")}>
+              Responsive Card
+            </li>
           </ul>
         </aside>
       </div>
