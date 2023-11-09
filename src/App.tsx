@@ -53,7 +53,23 @@ function App() {
           {demoMode === "card_responsive" && (
             <section>
               <h2>Responsive Card</h2>
-              <Carousel renderSlideContent={() => <Card />} />
+              <Carousel
+                breakpoints={{
+                  640: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                  },
+                  1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 10,
+                  },
+                }}
+                renderSlideContent={() => <Card />}
+              />
             </section>
           )}
         </div>

@@ -1,10 +1,17 @@
 import "./Card.css";
-import img from "./assets/thumbnail.jpg";
+import Thumbnail from "./Thumbnail";
 
 function Card() {
   return (
     <div className="Card">
-      <img src={img} alt="Card image" />
+      <Thumbnail />
+
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p>
+        Nunc dignissim rhoncus libero, ac dignissim elit placerat commodo.
+        Mauris congue dui nec lorem commodo lobortis. Aliquam vestibulum ac arcu
+        ut imperdiet.
+      </p>
     </div>
   );
 }
